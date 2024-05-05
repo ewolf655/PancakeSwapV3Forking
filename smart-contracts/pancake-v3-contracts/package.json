@@ -1,0 +1,26 @@
+{
+  "name": "pancake-v3",
+  "private": true,
+  "workspaces": [
+    "projects/*",
+    "deployer/*",
+    "common"
+  ],
+  "scripts": {
+    "compile": "yarn workspaces run compile",
+    "test": "yarn workspaces run test"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-verify": "^2.0.5",
+    "@typechain/hardhat": "^6.1.5",
+    "find-config": "^1.0.0",
+    "solidity-docgen": "^0.6.0-beta.35",
+    "zx": "^7.2.0"
+  },
+  "volta": {
+    "node": "16.19.1"
+  },
+  "dependencies": {
+    "yarn": "^1.22.22"
+  }
+}
