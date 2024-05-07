@@ -14,7 +14,7 @@ export const ChainLogo = memo(
           style={{ maxHeight: `${height}px` }}
           src={
             chainId === ChainId.HOLESKY
-              ? '/svg.svg' // [JNH]
+              ? '/holesky.png'
               : `${ASSET_CDN}/web/chains/${chainId}.png`
           }
           width={width}

@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 import type { HardhatUserConfig, NetworkUserConfig } from "hardhat/types";
 import "@nomiclabs/hardhat-ethers";
-import "@nomiclabs/hardhat-etherscan";
+import '@nomicfoundation/hardhat-verify'
 import "@nomiclabs/hardhat-waffle";
 import "@openzeppelin/hardhat-upgrades";
 import "@typechain/hardhat";
@@ -51,10 +51,10 @@ const sepolia: NetworkUserConfig = {
 }
 
 const holesky: NetworkUserConfig = {
-  url: "https://ethereum-holesky-rpc.publicnode.com",
+  url: 'https://ethereum-holesky-rpc.publicnode.com',
   chainId: 17000,
   accounts: [process.env.KEY_TESTNET!],
-};
+}
 
 const config = {
   defaultNetwork: "hardhat",
@@ -116,10 +116,10 @@ const config = {
         chainId: 17000,
         urls: {
           apiURL: "https://api-holesky.etherscan.io/api",
-          browserURL: "https://holesky.etherscan.io",
+          browserURL: "https://holesky.etherscan.io"
+        }
       },
-      },
-    ],
+    ]
   },
   solidity: {
     compilers: [

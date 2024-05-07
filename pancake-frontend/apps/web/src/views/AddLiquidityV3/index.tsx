@@ -307,7 +307,7 @@ export function UniversalAddLiquidity({
               />
             </FlexGap>
             <DynamicSection
-            // disabled={!baseCurrency || !currencyB} // JNH
+            // disabled={!baseCurrency || !currencyB}
             >
               {preferredSelectType !== SELECTOR_TYPE.V2 &&
                 stableConfig.stableSwapConfig &&
@@ -323,15 +323,15 @@ export function UniversalAddLiquidity({
 
               {((preferredSelectType === SELECTOR_TYPE.V2 && selectorType !== SELECTOR_TYPE.V3) ||
                 selectorType === SELECTOR_TYPE.V2) && (
-                  <V2Selector
-                    isStable={Boolean(stableConfig.stableSwapConfig)}
-                    selectorType={selectorType}
-                    handleFeePoolSelect={({ type }) => {
-                      // keep using state instead of replacing url in UniversalLiquidity
-                      handleFeePoolSelect({ type })
-                    }}
-                  />
-                )}
+                <V2Selector
+                  isStable={Boolean(stableConfig.stableSwapConfig)}
+                  selectorType={selectorType}
+                  handleFeePoolSelect={({ type }) => {
+                    // keep using state instead of replacing url in UniversalLiquidity
+                    handleFeePoolSelect({ type })
+                  }}
+                />
+              )}
 
               {!stableConfig.stableSwapConfig && selectorType === SELECTOR_TYPE.V3 && (
                 <FeeSelector

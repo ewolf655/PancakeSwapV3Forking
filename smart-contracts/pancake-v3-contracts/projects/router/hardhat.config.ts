@@ -6,7 +6,7 @@ import 'hardhat-abi-exporter'
 import 'hardhat-contract-sizer'
 import 'dotenv/config'
 import 'hardhat-tracer'
-import '@nomiclabs/hardhat-etherscan'
+// import '@nomiclabs/hardhat-etherscan'
 import 'solidity-docgen'
 import '@nomicfoundation/hardhat-verify'
 require('dotenv').config({ path: require('find-config')('.env') })
@@ -133,11 +133,11 @@ const config: HardhatUserConfig = {
         network: "holesky",
         chainId: 17000,
         urls: {
-          apiURL: 'https://api-holesky.etherscan.io/api',
-          browserURL: 'https://holesky.etherscan.io',
+          apiURL: "https://api-holesky.etherscan.io/api",
+          browserURL: "https://holesky.etherscan.io"
+        }
       },
-      },
-    ],
+    ]
   },
   solidity: {
     compilers: [

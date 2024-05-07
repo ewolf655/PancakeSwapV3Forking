@@ -1,6 +1,5 @@
 #!/usr/bin/env zx
 // import 'zx/globals'
-require('dotenv').config({ path: require('find-config')('.env') })
 
 const networks = {
   eth: 'eth',
@@ -8,10 +7,10 @@ const networks = {
   bscMainnet: 'bscMainnet',
   bscTestnet: 'bscTestnet',
   hardhat: 'hardhat',
-  holesky: 'holesky',
+  holesky: 'holesky'
 }
 
-let network = process.env.NETWORK
+let network = "holesky"
 console.log(network, 'network')
 if (!network || !networks[network]) {
   throw new Error(`env NETWORK: ${network}`)
@@ -21,10 +20,10 @@ await $`yarn workspace @pancakeswap/v3-core run hardhat run scripts/verify.ts --
 
 await $`yarn workspace @pancakeswap/v3-periphery run hardhat run scripts/verify.ts --network ${network}`
 
-await $`yarn workspace @pancakeswap/smart-router run hardhat run scripts/verify.ts --network ${network}`
-
 await $`yarn workspace @pancakeswap/masterchef-v3 run hardhat run scripts/verify.ts --network ${network}`
 
 await $`yarn workspace @pancakeswap/v3-lm-pool run hardhat run scripts/verify.ts --network ${network}`
+
+await $`yarn workspace @pancakeswap/smart-router run hardhat run scripts/verify.ts --network ${network}`
 
 console.log(chalk.blue('Done!'))

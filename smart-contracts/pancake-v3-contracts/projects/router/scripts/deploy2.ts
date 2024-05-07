@@ -99,8 +99,8 @@ async function main() {
   // await tryVerify(tokenValidator, [config.v2Factory, positionManager_address])
 
   const contracts = {
-    SmartRouter: smartRouter.address,
     SmartRouterHelper: smartRouterHelper.address,
+    SmartRouter: smartRouter.address,
     MixedRouteQuoterV1: mixedRouteQuoterV1.address,
     QuoterV2: quoterV2.address,
     TokenValidator: tokenValidator.address,

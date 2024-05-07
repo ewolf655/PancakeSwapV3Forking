@@ -1,6 +1,5 @@
 import type { HardhatUserConfig, NetworkUserConfig } from 'hardhat/types'
 import '@nomiclabs/hardhat-ethers'
-import '@nomiclabs/hardhat-etherscan'
 import '@nomiclabs/hardhat-waffle'
 import '@typechain/hardhat'
 import 'hardhat-watcher'
@@ -160,11 +159,11 @@ export default {
         network: "holesky",
         chainId: 17000,
         urls: {
-          apiURL: 'https://api-holesky.etherscan.io/api',
-          browserURL: 'https://holesky.etherscan.io',
-        },
+          apiURL: "https://api-holesky.etherscan.io/api",
+          browserURL: "https://holesky.etherscan.io"
+        }
       },
-    ],
+    ]
   },
   solidity: {
     compilers: [DEFAULT_COMPILER_SETTINGS],

@@ -31,20 +31,22 @@ const deploy = async (): Promise<string> => {
 
   console.log("PancackeFactory deployed to:", pancackeFactory.address);
   return pancackeFactory.address;
-};
+}
 
-const verify = async (address: string, parameter: any[] = []) => {
-  console.log(`Veryfing ${address} ...`);
-  await run("verify:verify", {
+const verify = async (address:string, parameter:any[] = []) => {
+  console.log(`Veryfing ${address} ...`)
+  await run('verify:verify', {
     address: address,
-    constructorArguments: parameter,
-  });
-  console.log("Success!");
-};
+    constructorArguments: parameter
+  })
+  console.log("Success!")
+}
 
 const main = async () => {
   const contractAddr = await deploy();
-  await verify(contractAddr, [FEE_SETTER]);
+  await verify(
+  contractAddr, 
+  [FEE_SETTER]);
 };
 
 main()

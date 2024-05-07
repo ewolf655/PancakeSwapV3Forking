@@ -19,7 +19,7 @@ export const getNotificationPairlogo = (title: string, message: string) => {
   const chainId = CHAIN_NAME_TO_CHAIN_ID[chainName === 'polygon_zkevm.' ? 'polygon_zkevm' : chainName]
 
   const image1 = isAprNotification ? '/images/notifications/farms-scope.svg' : '/logo.png'
-  const image2 = chainId === ChainId.HOLESKY ? `pulse.svg` : `${ASSET_CDN}/web/chains/${chainId}.png`
+  const image2 = chainId === ChainId.HOLESKY ? `holesky.png` : `${ASSET_CDN}/web/chains/${chainId}.png`
 
   return { image1, image2 }
 }

@@ -46,7 +46,7 @@ const NetworkSelect = ({ switchNetwork, chainId }) => {
       <UserMenuDivider />
       {chains
         .filter((chain) => {
-          if (chain.id === ChainId.HOLESKY) return true // [JNH]
+          if (chain.id === ChainId.HOLESKY) return true
           if (chain.id === chainId) return true
           if ('testnet' in chain && chain.testnet) {
             return showTestnet
@@ -200,7 +200,7 @@ export const NetworkSwitcher = () => {
         mr="8px"
         placement="bottom"
         variant={isLoading ? 'pending' : isWrongNetwork ? 'danger' : 'default'}
-        avatarSrc={chainId === ChainId.HOLESKY ? 'pulse.svg' : `${ASSET_CDN}/web/chains/${chainId}.png`}
+        avatarSrc={chainId === ChainId.HOLESKY ? 'holesky.png' : `${ASSET_CDN}/web/chains/${chainId}.png`}
         disabled={cannotChangeNetwork}
         text={
           isLoading ? (

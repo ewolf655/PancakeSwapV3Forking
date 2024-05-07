@@ -32,7 +32,7 @@ export const FACTORY_ADDRESS_MAP = {
   [ChainId.ARBITRUM_SEPOLIA]: '0x02a84c1b3BBD7401a5f7fa98a384EBC70bB5749E',
   [ChainId.BASE_SEPOLIA]: '0x02a84c1b3BBD7401a5f7fa98a384EBC70bB5749E',
   [ChainId.PULSE_TESTNET]: '0x41adc52ad43E4B05D442EC5A8240991958a003e2',
-  [ChainId.HOLESKY]: '0x85d309B43D2cd964D34f59Fd2612487F923e7D91',
+  [ChainId.HOLESKY]: '0x0DD754099a9189eF1D55D4719f9C7d6D6A25E1E4',
 } as const satisfies Record<ChainId, Address>
 
 export const INIT_CODE_HASH = '0xa5934690703a592a07e841ca29d5e5c79b5e22ed4749057bb216dc31100be1c0'
@@ -234,7 +234,7 @@ export const WETH9 = {
   ),
   [ChainId.HOLESKY]: new ERC20Token(
     ChainId.HOLESKY,
-    '0x6B5817E7091BC0C747741E96820b0199388245EA',
+    '0x94373a4919B3240D86eA41593D5eBa789FEF3848',
     18,
     'WETH',
     'Wrapped Ether',
@@ -364,7 +364,7 @@ export const NATIVE = {
   },
   [ChainId.PULSE_TESTNET]: {
     name: 'Pulse Ether',
-    symbol: 'TPLS',
+    symbol: 'ETH',
     decimals: 18,
   },
   [ChainId.HOLESKY]: {

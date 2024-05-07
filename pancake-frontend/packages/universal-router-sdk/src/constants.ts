@@ -33,7 +33,7 @@ const UNIVERSAL_ROUTER_ADDRESSES: Record<ChainId, Address> = {
   [ChainId.OPBNB_TESTNET]: '0xa8EEA7aa6620712524d18D742821848e55E773B5',
 
   [ChainId.PULSE_TESTNET]: '0xed8F253d747Ec6f047b89Fc9619f213F6aa1912F',
-  [ChainId.HOLESKY]: '0x71738eec51083Af9615743a33222e4487097eBB1',
+  [ChainId.HOLESKY]: '0x0f96162A47df0e755E766dde0722F75d7B5F0759',
 }
 
 export const getUniversalRouterAddress = (chainId: ChainId): Address => {

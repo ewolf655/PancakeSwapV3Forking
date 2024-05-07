@@ -44,15 +44,6 @@ export const configs = {
     cake: '0x3b8cf04F15A363fdB83B433a6C414D1516ecfeE6',
     smartRouterHelper: '??',
   },
-  holesky: {
-    WNATIVE: '0x6B5817E7091BC0C747741E96820b0199388245EA',
-    nativeCurrencyLabel: 'WETH',
-    v2Factory: '0x85d309B43D2cd964D34f59Fd2612487F923e7D91',
-    stableFactory: '0xCc25a2340598DaD00fba88Ff9628dDA376b46a72',
-    stableInfo: '0x23FA6819B860d366D8D1b8D308Be0135Ac750a9F',
-    cake: '0x941822b2EF4140A3224AcaD196ec52afc1e2d3B2',
-    smartRouterHelper: '0x1991E62EeF4D042C2363BC2a269c6a8d8fAf085c',
-  },
   sepolia: {
     WNATIVE: '0xf531B8F309Be94191af87605CfBf600D71C2cFe0',
     nativeCurrencyLabel: 'WETH',
@@ -69,6 +60,15 @@ export const configs = {
     stableFactory: '??',
     stableInfo: '??',
     cake: '??',
+    smartRouterHelper: '??',
+  },
+  holesky: {
+    WNATIVE: '0x94373a4919B3240D86eA41593D5eBa789FEF3848',
+    nativeCurrencyLabel: 'ETH',
+    v2Factory: '0x0DD754099a9189eF1D55D4719f9C7d6D6A25E1E4',
+    stableFactory: '0xa45096DFD27571e1f5421Cca028f76Cc65bc059C',
+    stableInfo: '0x67861260bc85Fd6C3F6eb2BF213a40AEe70a1B27',
+    cake: '0x075896e48636369e8d747e1Df01730EA1d4200AF',
     smartRouterHelper: '??',
   },
   hardhat: {

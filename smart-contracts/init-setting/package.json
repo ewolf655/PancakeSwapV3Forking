@@ -5,6 +5,8 @@
     "hardhat": "^2.22.2"
   },
   "dependencies": {
+    "@nomicfoundation/hardhat-verify": "^2.0.5",
+    "@typechain/hardhat": "^6.1.5",
     "dotenv": "^16.4.5",
     "find-config": "^1.0.0"
   }

@@ -76,7 +76,7 @@ const InfoNav: React.FC<{ isStableSwap: boolean }> = ({ isStableSwap }) => {
   )
 }
 
-const targetChains = [mainnet, bsc, polygonZkEvm, zkSync, arbitrum, linea, base, opBNB, pulsechainV4, holesky] // [JNH]
+const targetChains = [mainnet, bsc, polygonZkEvm, zkSync, arbitrum, linea, base, opBNB, pulsechainV4, holesky]
 
 export const NetworkSwitcher: React.FC<{ activeIndex: number }> = ({ activeIndex }) => {
   const { t } = useTranslation()
@@ -100,7 +100,7 @@ export const NetworkSwitcher: React.FC<{ activeIndex: number }> = ({ activeIndex
       ml="8px"
       avatarSrc={
         multiChainId[chainName] === ChainId.HOLESKY
-          ? '/pulse.svg'
+          ? '/holesky.png'
           : `${ASSET_CDN}/web/chains/${multiChainId[chainName]}.png`
       }
       text={

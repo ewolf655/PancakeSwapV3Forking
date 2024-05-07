@@ -19,8 +19,8 @@ import MasterChefArtifact from "./MasterChef.json";
 import MasterChefV2Artifact from "./MasterChefV2.json";
 import MockBoostArtifact from "./MockBoost.json";
 
-const WETH9Address = "0x6B5817E7091BC0C747741E96820b0199388245EA";
-const nativeCurrencyLabel = "WETH";
+const WETH9Address = "0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd";
+const nativeCurrencyLabel = "tBNB";
 
 describe("MasterChefV3", function () {
   let admin;

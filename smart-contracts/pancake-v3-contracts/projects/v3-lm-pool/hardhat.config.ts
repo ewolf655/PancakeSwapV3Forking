@@ -1,9 +1,10 @@
 import { HardhatUserConfig } from 'hardhat/config'
-import '@nomicfoundation/hardhat-toolbox'
+import "@nomiclabs/hardhat-ethers";
+import '@nomicfoundation/hardhat-verify';
 import '@typechain/hardhat'
-import 'dotenv/config'
 import { NetworkUserConfig } from 'hardhat/types'
 import 'solidity-docgen';
+import "dotenv/config";
 require('dotenv').config({ path: require('find-config')('.env') })
 
 const bscTestnet: NetworkUserConfig = {
@@ -42,7 +43,7 @@ const holesky: NetworkUserConfig = {
   accounts: [process.env.KEY_TESTNET!],
 }
 
-const config: HardhatUserConfig = {
+const config = {
   solidity: {
     version: '0.7.6',
   },
@@ -100,11 +101,11 @@ const config: HardhatUserConfig = {
         network: "holesky",
         chainId: 17000,
         urls: {
-          apiURL: 'https://api-holesky.etherscan.io/api',
-          browserURL: 'https://holesky.etherscan.io',
-        },
+          apiURL: "https://api-holesky.etherscan.io/api",
+          browserURL: "https://holesky.etherscan.io"
+        }
       },
-    ],
+    ]
   },
   paths: {
     sources: './contracts/',

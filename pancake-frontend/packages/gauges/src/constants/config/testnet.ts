@@ -88,7 +88,7 @@ export const CONFIG_TESTNET: GaugeConfig[] = [
     chainId: ChainId.ETHEREUM,
     type: GaugeType.ALM,
     pairName: 'USDC-USDT (RANGE#2)',
-    token0Address: '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48',
+    token0Address: '0xbDd2D3511d2D47e0d3d3FE963e293C0B8e423DBb',
     token1Address: '0x51B279055E4f264BbB38AAB6FB4f62E18Cc2a234',
   },
   {
