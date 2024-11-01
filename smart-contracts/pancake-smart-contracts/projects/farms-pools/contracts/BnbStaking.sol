@@ -2,9 +2,9 @@
 pragma solidity 0.6.12;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
-import "@openzeppelin/contracts/math/SafeMath.sol";
-import "bsc-library/contracts/IBEP20.sol";
-import "bsc-library/contracts/SafeBEP20.sol";
+// import "@openzeppelin/contracts/math/SafeMath.sol";
+import "@pancakeswap/pancake-swap-lib/contracts/token/BEP20/IBEP20.sol";
+import "@pancakeswap/pancake-swap-lib/contracts/token/BEP20/SafeBEP20.sol";
 
 interface IWBNB {
     function deposit() external payable;

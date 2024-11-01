@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.6.12;
 
-import "bsc-library/contracts/BEP20.sol";
+import "@pancakeswap/pancake-swap-lib/contracts/token/BEP20/BEP20.sol";
 import "./CakeToken.sol";
 
 // SyrupBar with Governance.

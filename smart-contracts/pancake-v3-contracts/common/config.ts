@@ -71,6 +71,15 @@ export const configs = {
     cake: '0x075896e48636369e8d747e1Df01730EA1d4200AF',
     smartRouterHelper: '??',
   },
+  amoyTestnet: {
+    WNATIVE: '0xA5733b3A8e62A8faF43b0376d5fAF46E89B3033E ',
+    nativeCurrencyLabel: 'POL',
+    v2Factory: '0x9fF3043CFa385f617726903E9809DD2bf2c53899',
+    stableFactory: '0xd1F483B7BFb8cBd761915097885B49Fe77117A7A',
+    stableInfo: '0x57610e21D1fd225C12034669e44f75e8EBe0A881',
+    cake: '0x97cab1cB2F9B2B32140f86F8b9760479802B3718',
+    smartRouterHelper: '0xDdc8dD55d3629C922b4eD505160d52401F3d3F32',
+  },
   hardhat: {
     WNATIVE: '0x0000000000000000000000000000000000000000',
     nativeCurrencyLabel: 'BNB',

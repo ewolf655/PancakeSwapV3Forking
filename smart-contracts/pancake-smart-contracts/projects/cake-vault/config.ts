@@ -6,10 +6,12 @@ export default {
     pulseTestnet: "0x3A6820EFaE83E90E2A33cBaB58425b6FF18b1acb",
     sepolia: "0x3A6820EFaE83E90E2A33cBaB58425b6FF18b1acb",
     holesky: "0x3A6820EFaE83E90E2A33cBaB58425b6FF18b1acb",
+    amoyTestnet: "0x3A6820EFaE83E90E2A33cBaB58425b6FF18b1acb",
   },
   CakeVault: {
     mainnet: "0xa80240eb5d7e05d3f250cf000eec0891d00b51cc",
     testnet: "0x0000000000000000000000000000000000000000",
+    amoyTestnet: "0xC650435328518411c67a2505896B333366b995ed",
   },
   Treasury: {
     // TODO: Change
@@ -18,18 +20,22 @@ export default {
     pulseTestnet: "0x27e0C3c11F2184C323d8c16129b3A26CC5c7b382",
     sepolia: "0x27e0C3c11F2184C323d8c16129b3A26CC5c7b382",
     holesky: "0x27e0C3c11F2184C323d8c16129b3A26CC5c7b382",
+    amoyTestnet: "0x3A6820EFaE83E90E2A33cBaB58425b6FF18b1acb",
   },
   MasterChef: {
     // Syrup Pool: Cake Pool
     mainnet: "0x73feaa1eE314F8c655E354234017bE2193C9E24E",
     testnet: "0x0000000000000000000000000000000000000000",
+    amoyTestnet: "0x0c74FC96Acd1900eEd71F271B7a6287476B3A02a",
   },
   Cake: {
     mainnet: "0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82",
     testnet: "0x0000000000000000000000000000000000000000",
+    amoyTestnet: "0xBFa17402dD6aA15a306d409F9E9Ff6EF92e37204",
   },
   Syrup: {
     mainnet: "0x009cF7bC57584b7998236eff51b98A168DceA9B0",
     testnet: "0x0000000000000000000000000000000000000000",
+    amoyTestnet: "0x5312173d712a7c5a20Cf6d405f2155BCC22ccB96",
   },
 };

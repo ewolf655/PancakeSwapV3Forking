@@ -38,11 +38,21 @@ const holesky: NetworkUserConfig = {
   accounts: [process.env.KEY_TESTNET!],
 }
 
+const amoyTestnet: NetworkUserConfig = {
+  url: "https://polygon-amoy-bor-rpc.publicnode.com",
+  chainId: 80002,
+  accounts: [process.env.KEY_TESTNET!],
+  timeout: 20000000,
+  gasPrice: 30000000000,
+}
+
 const config = {
   defaultNetwork: "hardhat",
   networks: {
     hardhat: {},
+    ...(process.env.KEY_TESTNET && { amoyTestnet }),
     sepolia: sepolia,
+    amoyTestnet: amoyTestnet,
     ...{holesky}
     // pulseTestnet: pulseTestnet,
     // testnet: bscTestnet,
@@ -54,7 +64,8 @@ const config = {
       bsc: process.env.BSCSCAN_API_KEY,
       pulseTestnet: "0000000000000000000000000000000000",
       mumbai: process.env.MUMBAI_API_KEY,
-      holesky: process.env.ETHERSCAN_API_KEY
+      holesky: process.env.ETHERSCAN_API_KEY,
+      amoyTestnet: process.env.OKLINK_API_KEY!
     },
     customChains: [
       {
@@ -97,6 +108,14 @@ const config = {
           browserURL: "https://holesky.etherscan.io"
         }
       },
+      {
+        network: 'amoyTestnet',
+        chainId: 80002,
+        urls: {
+          apiURL: "https://api-amoy.polygonscan.com/api",
+          browserURL: "https://amoy.polygonscan.com",
+        },
+      }
     ]
   },
   solidity: {

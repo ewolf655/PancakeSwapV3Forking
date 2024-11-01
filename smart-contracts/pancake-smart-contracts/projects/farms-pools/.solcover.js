@@ -16,6 +16,9 @@ module.exports = {
     "SousChef.sol",
     "SyrupBar.sol",
     "Timelock.sol",
+    "flattened_smartchef.sol",
+    "SmartChefFactory.sol",
+    "SmartChefInitializable.sol"
   ],
   measureStatementCoverage: false,
   measureFunctionCoverage: true,

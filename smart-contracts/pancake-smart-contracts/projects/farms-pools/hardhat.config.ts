@@ -6,6 +6,7 @@ import "hardhat-abi-exporter";
 import "hardhat-contract-sizer";
 import "solidity-coverage";
 import "dotenv/config";
+import "@nomiclabs/hardhat-etherscan";
 
 const bscTestnet: NetworkUserConfig = {
   url: "https://data-seed-prebsc-1-s1.binance.org:8545/",
@@ -19,12 +20,35 @@ const bscMainnet: NetworkUserConfig = {
   accounts: [process.env.KEY_MAINNET!],
 };
 
+const amoyTestnet: NetworkUserConfig = {
+  url: "https://polygon-amoy-bor-rpc.publicnode.com",
+  chainId: 80002,
+  accounts: [process.env.KEY_TESTNET!],
+  timeout: 20000000,
+  gasPrice: 30000000000,
+}
+
 const config: HardhatUserConfig = {
   defaultNetwork: "hardhat",
   networks: {
     hardhat: {},
-    // testnet: bscTestnet,
-    // mainnet: bscMainnet,
+    ...(process.env.KEY_TESTNET && { amoyTestnet }),
+    amoyTestnet: amoyTestnet,
+  },
+  etherscan: {
+    apiKey: {
+      amoyTestnet: process.env.OKLINK_API_KEY!
+    },
+    customChains: [
+      {
+        network: 'amoyTestnet',
+        chainId: 80002,
+        urls: {
+          apiURL: "https://api-amoy.polygonscan.com/api",
+          browserURL: "https://amoy.polygonscan.com",
+        },
+      }
+    ]
   },
   solidity: {
     version: "0.6.12",

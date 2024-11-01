@@ -16,54 +16,58 @@ const main = async () => {
   // Get network name: hardhat, testnet or mainnet.
   const { name } = network;
 
-  if (name == "mainnet") {
-    if (!process.env.KEY_MAINNET) {
-      throw new Error("Missing private key, refer to README 'Deployment' section");
-    }
-    if (!config.Admin[name] || config.Admin[name] === constants.ZERO_ADDRESS) {
-      throw new Error("Missing admin address, refer to README 'Deployment' section");
-    }
-    if (!config.Treasury[name] || config.Treasury[name] === constants.ZERO_ADDRESS) {
-      throw new Error("Missing treasury address, refer to README 'Deployment' section");
-    }
-    if (!config.Syrup[name] || config.Syrup[name] === constants.ZERO_ADDRESS) {
-      throw new Error("Missing syrup address, refer to README 'Deployment' section");
-    }
-    if (!config.Cake[name] || config.Cake[name] === constants.ZERO_ADDRESS) {
-      throw new Error("Missing syrup address, refer to README 'Deployment' section");
-    }
-    if (!config.MasterChef[name] || config.MasterChef[name] === constants.ZERO_ADDRESS) {
-      throw new Error("Missing master address, refer to README 'Deployment' section");
-    }
-  }
+  // if (name == "mainnet") {
+  //   if (!process.env.KEY_MAINNET) {
+  //     throw new Error("Missing private key, refer to README 'Deployment' section");
+  //   }
+  //   if (!config.Admin[name] || config.Admin[name] === constants.ZERO_ADDRESS) {
+  //     throw new Error("Missing admin address, refer to README 'Deployment' section");
+  //   }
+  //   if (!config.Treasury[name] || config.Treasury[name] === constants.ZERO_ADDRESS) {
+  //     throw new Error("Missing treasury address, refer to README 'Deployment' section");
+  //   }
+  //   if (!config.Syrup[name] || config.Syrup[name] === constants.ZERO_ADDRESS) {
+  //     throw new Error("Missing syrup address, refer to README 'Deployment' section");
+  //   }
+  //   if (!config.Cake[name] || config.Cake[name] === constants.ZERO_ADDRESS) {
+  //     throw new Error("Missing syrup address, refer to README 'Deployment' section");
+  //   }
+  //   if (!config.MasterChef[name] || config.MasterChef[name] === constants.ZERO_ADDRESS) {
+  //     throw new Error("Missing master address, refer to README 'Deployment' section");
+  //   }
+  // }
 
   console.log("Deploying to network:", name);
 
   let cake, syrup, masterchef, admin, treasury;
-  let cake_addr, syrup_addr, masterchef_addr
-  if (name == "mainnet") {
-    admin = config.Admin[name];
-    treasury = config.Treasury[name];
-    cake_addr = config.Cake[name];
-    syrup_addr = config.Syrup[name];
-    masterchef_addr = config.MasterChef[name];
-  } else {
-    console.log("Deploying mocks");
+  let cake_addr, syrup_addr, masterchef_addr;
+  // if (name == "mainnet") {
+  admin = config.Admin[name];
+  treasury = config.Treasury[name];
+  //   cake_addr = config.Cake[name];
+  //   syrup_addr = config.Syrup[name];
+  //   masterchef_addr = config.MasterChef[name];
+  // } else {
+  //   console.log("Deploying mocks");
+  //   const CakeContract = await ethers.getContractFactory("CakeToken");
+  //   const SyrupContract = await ethers.getContractFactory("SyrupBar");
+  //   const MasterChefContract = await ethers.getContractFactory("MasterChef");
+  //   const currentBlock = await ethers.provider.getBlockNumber();
+
+  //   if (name === "hardhat") {
+  //     const [deployer] = await ethers.getSigners();
+  //     admin = deployer.address;
+  //     treasury = deployer.address;
+  //   } else {
+  //     admin = config.Admin[name];
+  //     treasury = config.Treasury[name];
+  //   }
     const CakeContract = await ethers.getContractFactory("CakeToken");
     const SyrupContract = await ethers.getContractFactory("SyrupBar");
     const MasterChefContract = await ethers.getContractFactory("MasterChef");
     const currentBlock = await ethers.provider.getBlockNumber();
 
-    if (name === "hardhat") {
-      const [deployer] = await ethers.getSigners();
-      admin = deployer.address;
-      treasury = deployer.address;
-    } else {
-      admin = config.Admin[name];
-      treasury = config.Treasury[name];
-    }
-
-    cake_addr = ''
+    cake_addr = '0xBFa17402dD6aA15a306d409F9E9Ff6EF92e37204'
     if (!cake_addr) {
       cake = (await CakeContract.deploy());
       await cake.deployed();
@@ -73,7 +77,7 @@ const main = async () => {
     await verify(cake_addr)
     console.log("[DAVID] Cake deployed to:", cake_addr);
 
-    syrup_addr = ''
+    syrup_addr = '0x5312173d712a7c5a20Cf6d405f2155BCC22ccB96'
     if (!syrup_addr) {
       syrup = (await SyrupContract.deploy(cake_addr));
       await syrup.deployed();
@@ -83,7 +87,7 @@ const main = async () => {
     await sleep(10000);
     await verify(syrup_addr, [cake_addr]);
 
-    masterchef_addr = ''
+    masterchef_addr = '0x0c74FC96Acd1900eEd71F271B7a6287476B3A02a'
     if (!masterchef_addr) {
       masterchef = (await MasterChefContract.deploy(cake_addr, syrup_addr, admin, ethers.BigNumber.from("1"), currentBlock));
       await masterchef.deployed();
@@ -99,7 +103,6 @@ const main = async () => {
     console.log("Cake deployed to:", cake_addr);
     console.log("Syrup deployed to:", syrup_addr);
     console.log("MasterChef deployed to:", masterchef_addr);
-  }
 
   console.log("Deploying Cake Vault...");
 

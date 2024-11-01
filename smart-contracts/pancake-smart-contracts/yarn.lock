@@ -1921,10 +1921,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@nomicfoundation/hardhat-verify@^2.0.5":
-  version "2.0.5"
-  resolved "https://registry.npmjs.org/@nomicfoundation/hardhat-verify/-/hardhat-verify-2.0.5.tgz"
-  integrity sha512-Tg4zu8RkWpyADSFIgF4FlJIUEI4VkxcvELsmbJn2OokbvH2SnUrqKmw0BBfDrtvP0hhmx8wsnrRKP5DV/oTyTA==
+"@nomicfoundation/hardhat-verify@^2.0.11", "@nomicfoundation/hardhat-verify@^2.0.5":
+  version "2.0.11"
+  resolved "https://registry.npmjs.org/@nomicfoundation/hardhat-verify/-/hardhat-verify-2.0.11.tgz"
+  integrity sha512-lGIo4dNjVQFdsiEgZp3KP6ntLiF7xJEJsbNHfSyIiFCyI0Yv0518ElsFtMC5uCuHEChiBBMrib9jWQvHHT+X3Q==
   dependencies:
     "@ethersproject/abi" "^5.1.2"
     "@ethersproject/address" "^5.0.2"
@@ -1945,6 +1945,22 @@
   version "2.0.2"
   resolved "https://registry.npmjs.org/@nomiclabs/hardhat-ethers/-/hardhat-ethers-2.0.2.tgz"
   integrity sha512-6quxWe8wwS4X5v3Au8q1jOvXYEPkS1Fh+cME5u6AwNdnI4uERvPlVjlgRWzpnb+Rrt1l/cEqiNRH9GlsBMSDQg==
+
+"@nomiclabs/hardhat-etherscan@^3.1.8":
+  version "3.1.8"
+  resolved "https://registry.npmjs.org/@nomiclabs/hardhat-etherscan/-/hardhat-etherscan-3.1.8.tgz"
+  integrity sha512-v5F6IzQhrsjHh6kQz4uNrym49brK9K5bYCq2zQZ729RYRaifI9hHbtmK+KkIVevfhut7huQFEQ77JLRMAzWYjQ==
+  dependencies:
+    "@ethersproject/abi" "^5.1.2"
+    "@ethersproject/address" "^5.0.2"
+    cbor "^8.1.0"
+    chalk "^2.4.2"
+    debug "^4.1.1"
+    fs-extra "^7.0.1"
+    lodash "^4.17.11"
+    semver "^6.3.0"
+    table "^6.8.0"
+    undici "^5.14.0"
 
 "@nomiclabs/hardhat-truffle5@^2.0.0":
   version "2.0.0"
@@ -2241,7 +2257,7 @@
     eslint-plugin-react "^7.21.5"
     eslint-plugin-react-hooks "^4.0.0"
 
-"@pancakeswap/pancake-swap-lib@0.0.4":
+"@pancakeswap/pancake-swap-lib@^0.0.4", "@pancakeswap/pancake-swap-lib@0.0.4":
   version "0.0.4"
   resolved "https://registry.npmjs.org/@pancakeswap/pancake-swap-lib/-/pancake-swap-lib-0.0.4.tgz"
   integrity sha512-efauTqrPQX0P2X159Z5YnAVNmD8jvFxei9iIbDU850MG7KuupfqNTfDoN2/dCMo2GomSFokG2MjW0GenZc4EFg==
@@ -4087,8 +4103,7 @@ bs58check@^2.1.2:
     safe-buffer "^5.1.2"
 
 bsc-library@1.0.0:
-  version "1.0.0"
-  resolved "file:projects/bsc-library"
+  resolved "git+ssh://git@github.com/projects/bsc-library.git"
 
 buffer-from@^1.0.0:
   version "1.1.1"
@@ -6163,6 +6178,12 @@ eth-query@^2.0.2, eth-query@^2.1.0, eth-query@^2.1.2:
     json-rpc-random-id "^1.0.0"
     xtend "^4.0.1"
 
+eth-sig-util@^1.4.2:
+  version "1.4.2"
+  dependencies:
+    ethereumjs-abi "git+https://github.com/ethereumjs/ethereumjs-abi.git"
+    ethereumjs-util "^5.1.1"
+
 eth-sig-util@^2.5.2:
   version "2.5.4"
   resolved "https://registry.npmjs.org/eth-sig-util/-/eth-sig-util-2.5.4.tgz"
@@ -6707,7 +6728,7 @@ evp_bytestokey@^1.0.0, evp_bytestokey@^1.0.3:
     md5.js "^1.3.4"
     safe-buffer "^5.1.1"
 
-"exchange-protocol@file:/tiger/pancakeswap-v3-fork/smart-contracts/pancake-smart-contracts/projects/exchange-protocol":
+"exchange-protocol@file:/tiger/PancakeSwapV3Forking/smart-contracts/pancake-smart-contracts/projects/exchange-protocol":
   version "2.0.0"
   resolved "file:projects/exchange-protocol"
   dependencies:
@@ -6867,15 +6888,15 @@ fake-merkle-patricia-tree@^1.0.1:
   dependencies:
     checkpoint-store "^1.1.0"
 
-"farm-auctions@file:/tiger/pancakeswap-v3-fork/smart-contracts/pancake-smart-contracts/projects/farm-auctions":
+"farm-auctions@file:/tiger/PancakeSwapV3Forking/smart-contracts/pancake-smart-contracts/projects/farm-auctions":
   version "1.0.0"
   resolved "file:projects/farm-auctions"
 
-"farms-pools@file:/tiger/pancakeswap-v3-fork/smart-contracts/pancake-smart-contracts/projects/farms-pools":
+"farms-pools@file:/tiger/PancakeSwapV3Forking/smart-contracts/pancake-smart-contracts/projects/farms-pools":
   version "1.0.1"
   resolved "file:projects/farms-pools"
   dependencies:
-    bsc-library "1.0.0"
+    "@nomicfoundation/hardhat-verify" "^2.0.11"
 
 fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
   version "3.1.3"
@@ -8020,7 +8041,7 @@ ieee754@^1.1.13, ieee754@^1.1.4, ieee754@^1.2.1:
   resolved "https://registry.npmjs.org/ieee754/-/ieee754-1.2.1.tgz"
   integrity sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==
 
-"ifo@file:/tiger/pancakeswap-v3-fork/smart-contracts/pancake-smart-contracts/projects/ifo":
+"ifo@file:/tiger/PancakeSwapV3Forking/smart-contracts/pancake-smart-contracts/projects/ifo":
   version "2.0.0"
   resolved "file:projects/ifo"
   dependencies:
@@ -8769,7 +8790,7 @@ jsonfile@^2.1.0:
 jsonfile@^4.0.0:
   version "4.0.0"
   resolved "https://registry.npmjs.org/jsonfile/-/jsonfile-4.0.0.tgz"
-  integrity sha1-h3Gq4HmbZAdrdmQPygWPnBDjPss= sha512-m6F1R3z8jjlf2imQHS2Qez5sjKWQzbuuhuJ/FKYFRZvPE3PuHcSMVZzfsLhGVOkfd20obL5SWEBew5ShlquNxg==
+  integrity sha512-m6F1R3z8jjlf2imQHS2Qez5sjKWQzbuuhuJ/FKYFRZvPE3PuHcSMVZzfsLhGVOkfd20obL5SWEBew5ShlquNxg==
   optionalDependencies:
     graceful-fs "^4.1.6"
 
@@ -9333,7 +9354,7 @@ loose-envify@^1.4.0:
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
 
-"lottery@file:/tiger/pancakeswap-v3-fork/smart-contracts/pancake-smart-contracts/projects/lottery":
+"lottery@file:/tiger/PancakeSwapV3Forking/smart-contracts/pancake-smart-contracts/projects/lottery":
   version "2.0.0"
   resolved "file:projects/lottery"
 
@@ -10056,7 +10077,7 @@ next-tick@~1.0.0:
   resolved "https://registry.npmjs.org/next-tick/-/next-tick-1.0.0.tgz"
   integrity sha1-yobR/ogoFpsBICCOPchCS524NCw= sha512-mc/caHeUcdjnC/boPWJefDr4KUIWQNv+tlnFnJd38QMou86QtxQzBJfxgGRzvx8jazYRqrVlaHarfO72uNxPOg==
 
-"nft-markets@file:/tiger/pancakeswap-v3-fork/smart-contracts/pancake-smart-contracts/projects/nft-markets":
+"nft-markets@file:/tiger/PancakeSwapV3Forking/smart-contracts/pancake-smart-contracts/projects/nft-markets":
   version "1.0.0"
   resolved "file:projects/nft-markets"
 
@@ -10799,29 +10820,29 @@ pako@^1.0.4, pako@~1.0.5:
   resolved "https://registry.npmjs.org/pako/-/pako-1.0.11.tgz"
   integrity sha512-4hLB8Py4zZce5s4yd9XzopqwVv/yGNhV1Bl8NTmCq1763HeK2+EwVTv+leGeL13Dnh2wfbqowVPXCIO0z4taYw==
 
-pancake-cake-vault@1.0.0, "pancake-cake-vault@file:/tiger/pancakeswap-v3-fork/smart-contracts/pancake-smart-contracts/projects/cake-vault":
+pancake-cake-vault@1.0.0, "pancake-cake-vault@file:/tiger/PancakeSwapV3Forking/smart-contracts/pancake-smart-contracts/projects/cake-vault":
   version "1.0.0"
   resolved "file:projects/cake-vault"
 
-"pancake-revenue-sharing-pool-v1@file:/tiger/pancakeswap-v3-fork/smart-contracts/pancake-smart-contracts/projects/revenue-sharing-pool/v1":
+"pancake-revenue-sharing-pool-v1@file:/tiger/PancakeSwapV3Forking/smart-contracts/pancake-smart-contracts/projects/revenue-sharing-pool/v1":
   version "1.0.0"
   resolved "file:projects/revenue-sharing-pool/v1"
   dependencies:
     "@nomiclabs-2.2.2/hardhat-ethers" "npm:@nomiclabs/hardhat-ethers@^2.2.2"
     "@openzeppelin-4.5.0/contracts" "npm:@openzeppelin/contracts@4.5.0"
 
-"pancake-revenue-sharing-pool-v2@file:/tiger/pancakeswap-v3-fork/smart-contracts/pancake-smart-contracts/projects/revenue-sharing-pool/v2":
+"pancake-revenue-sharing-pool-v2@file:/tiger/PancakeSwapV3Forking/smart-contracts/pancake-smart-contracts/projects/revenue-sharing-pool/v2":
   version "1.0.0"
   resolved "file:projects/revenue-sharing-pool/v2"
   dependencies:
     "@nomiclabs-2.2.2/hardhat-ethers" "npm:@nomiclabs/hardhat-ethers@^2.2.2"
     "@openzeppelin-4.5.0/contracts" "npm:@openzeppelin/contracts@4.5.0"
 
-"pancake-squad@file:/tiger/pancakeswap-v3-fork/smart-contracts/pancake-smart-contracts/projects/pancake-squad":
+"pancake-squad@file:/tiger/PancakeSwapV3Forking/smart-contracts/pancake-smart-contracts/projects/pancake-squad":
   version "1.0.0"
   resolved "file:projects/pancake-squad"
 
-"pancake-stable-swap@file:/tiger/pancakeswap-v3-fork/smart-contracts/pancake-smart-contracts/projects/stable-swap":
+"pancake-stable-swap@file:/tiger/PancakeSwapV3Forking/smart-contracts/pancake-smart-contracts/projects/stable-swap":
   version "1.0.0"
   resolved "file:projects/stable-swap"
   dependencies:
@@ -11144,15 +11165,15 @@ postinstall-postinstall@^2.1.0:
 precond@0.2:
   version "0.2.3"
 
-"predictions-v2@file:/tiger/pancakeswap-v3-fork/smart-contracts/pancake-smart-contracts/projects/predictions/v2":
+"predictions-v2@file:/tiger/PancakeSwapV3Forking/smart-contracts/pancake-smart-contracts/projects/predictions/v2":
   version "2.0.0"
   resolved "file:projects/predictions/v2"
 
-"predictions-v3@file:/tiger/pancakeswap-v3-fork/smart-contracts/pancake-smart-contracts/projects/predictions/v3":
+"predictions-v3@file:/tiger/PancakeSwapV3Forking/smart-contracts/pancake-smart-contracts/projects/predictions/v3":
   version "2.0.0"
   resolved "file:projects/predictions/v3"
 
-predictions@1.0.1, "predictions@file:/tiger/pancakeswap-v3-fork/smart-contracts/pancake-smart-contracts/projects/predictions/v1":
+predictions@1.0.1, "predictions@file:/tiger/PancakeSwapV3Forking/smart-contracts/pancake-smart-contracts/projects/predictions/v1":
   version "1.0.1"
   resolved "file:projects/predictions/v1"
 
@@ -11211,7 +11232,7 @@ process@^0.11.10:
   resolved "https://registry.npmjs.org/process/-/process-0.11.10.tgz"
   integrity sha1-czIwDoQBYb2j5podHZGn1LwW8YI= sha512-cdGef/drWFoydD1JsMzuFf8100nZl+GT+yacc2bEced5f9Rjk4z+WtFUTBu9PhOi9j/jfmBPu0mMEY4wIdAF8A==
 
-profile-nft-gamification@2.0.0, "profile-nft-gamification@file:/tiger/pancakeswap-v3-fork/smart-contracts/pancake-smart-contracts/projects/profile-nft-gamification":
+profile-nft-gamification@2.0.0, "profile-nft-gamification@file:/tiger/PancakeSwapV3Forking/smart-contracts/pancake-smart-contracts/projects/profile-nft-gamification":
   version "2.0.0"
   resolved "file:projects/profile-nft-gamification"
   dependencies:
@@ -12371,7 +12392,7 @@ smart-buffer@^4.1.0:
   resolved "https://registry.npmjs.org/smart-buffer/-/smart-buffer-4.1.0.tgz"
   integrity sha512-iVICrxOzCynf/SNaBQCw34eM9jROU/s5rzIhpOvzhzuYHfJR/DhZfDkXiZSgKXfgv26HT3Yni3AV/DGw0cGnnw==
 
-"smartchef-v2@file:/tiger/pancakeswap-v3-fork/smart-contracts/pancake-smart-contracts/projects/smartchef/v2":
+"smartchef-v2@file:/tiger/PancakeSwapV3Forking/smart-contracts/pancake-smart-contracts/projects/smartchef/v2":
   version "2.0.0"
   resolved "file:projects/smartchef/v2"
 
@@ -13775,14 +13796,14 @@ vary@^1, vary@~1.1.2:
   resolved "https://registry.npmjs.org/vary/-/vary-1.1.2.tgz"
   integrity sha1-IpnwLG3tMNSllhsLn3RSShj2NPw= sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==
 
-"vecake-farm-booster-v3@file:/tiger/pancakeswap-v3-fork/smart-contracts/pancake-smart-contracts/projects/vecake-farm-booster/v3":
+"vecake-farm-booster-v3@file:/tiger/PancakeSwapV3Forking/smart-contracts/pancake-smart-contracts/projects/vecake-farm-booster/v3":
   version "1.0.0"
   resolved "file:projects/vecake-farm-booster/v3"
   dependencies:
     "@nomiclabs-2.2.2/hardhat-ethers" "npm:@nomiclabs/hardhat-ethers@^2.2.2"
     "@openzeppelin-4.5.0/contracts" "npm:@openzeppelin/contracts@4.5.0"
 
-"vecake@file:/tiger/pancakeswap-v3-fork/smart-contracts/pancake-smart-contracts/projects/vecake":
+"vecake@file:/tiger/PancakeSwapV3Forking/smart-contracts/pancake-smart-contracts/projects/vecake":
   version "1.0.0"
   resolved "file:projects/vecake"
   dependencies:
@@ -13803,7 +13824,7 @@ vm-browserify@^1.0.1:
   resolved "https://registry.npmjs.org/vm-browserify/-/vm-browserify-1.1.2.tgz"
   integrity sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
 
-"voter@file:/tiger/pancakeswap-v3-fork/smart-contracts/pancake-smart-contracts/projects/voter":
+"voter@file:/tiger/PancakeSwapV3Forking/smart-contracts/pancake-smart-contracts/projects/voter":
   version "1.0.0"
   resolved "file:projects/voter"
   dependencies:
@@ -14377,7 +14398,7 @@ web3-provider-engine@14.2.1:
     cross-fetch "^2.1.0"
     eth-block-tracker "^3.0.0"
     eth-json-rpc-infura "^3.1.0"
-    eth-sig-util "3.0.0"
+    eth-sig-util "^1.4.2"
     ethereumjs-block "^1.2.2"
     ethereumjs-tx "^1.2.0"
     ethereumjs-util "^5.1.5"

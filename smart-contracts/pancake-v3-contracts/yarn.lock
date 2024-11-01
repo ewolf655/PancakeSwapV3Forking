@@ -1539,7 +1539,7 @@
     proper-lockfile "^4.1.1"
     solidity-ast "^0.4.15"
 
-"@pancakeswap/common@*", "@pancakeswap/common@file:/tiger/pancakeswap-v3-fork/smart-contracts/pancake-v3-contracts/common":
+"@pancakeswap/common@*", "@pancakeswap/common@file:/tiger/PancakeSwapV3Forking/smart-contracts/pancake-v3-contracts/common":
   version "0.0.0"
   resolved "file:common"
 
@@ -1557,7 +1557,7 @@
     eslint-plugin-react "^7.21.5"
     eslint-plugin-react-hooks "^4.0.0"
 
-"@pancakeswap/masterchef-v3@file:/tiger/pancakeswap-v3-fork/smart-contracts/pancake-v3-contracts/projects/masterchef-v3":
+"@pancakeswap/masterchef-v3@file:/tiger/PancakeSwapV3Forking/smart-contracts/pancake-v3-contracts/projects/masterchef-v3":
   version "1.0.0"
   resolved "file:projects/masterchef-v3"
 
@@ -1566,19 +1566,19 @@
   resolved "https://registry.npmjs.org/@pancakeswap/pancake-swap-lib/-/pancake-swap-lib-0.0.4.tgz"
   integrity sha512-efauTqrPQX0P2X159Z5YnAVNmD8jvFxei9iIbDU850MG7KuupfqNTfDoN2/dCMo2GomSFokG2MjW0GenZc4EFg==
 
-"@pancakeswap/smart-router@file:/tiger/pancakeswap-v3-fork/smart-contracts/pancake-v3-contracts/projects/router":
+"@pancakeswap/smart-router@file:/tiger/PancakeSwapV3Forking/smart-contracts/pancake-v3-contracts/projects/router":
   version "1.0.0"
   resolved "file:projects/router"
 
-"@pancakeswap/v3-core@*", "@pancakeswap/v3-core@file:/tiger/pancakeswap-v3-fork/smart-contracts/pancake-v3-contracts/projects/v3-core":
+"@pancakeswap/v3-core@*", "@pancakeswap/v3-core@file:/tiger/PancakeSwapV3Forking/smart-contracts/pancake-v3-contracts/projects/v3-core":
   version "1.0.2"
   resolved "file:projects/v3-core"
 
-"@pancakeswap/v3-lm-pool@*", "@pancakeswap/v3-lm-pool@file:/tiger/pancakeswap-v3-fork/smart-contracts/pancake-v3-contracts/projects/v3-lm-pool":
+"@pancakeswap/v3-lm-pool@*", "@pancakeswap/v3-lm-pool@file:/tiger/PancakeSwapV3Forking/smart-contracts/pancake-v3-contracts/projects/v3-lm-pool":
   version "1.0.0"
   resolved "file:projects/v3-lm-pool"
 
-"@pancakeswap/v3-periphery@*", "@pancakeswap/v3-periphery@file:/tiger/pancakeswap-v3-fork/smart-contracts/pancake-v3-contracts/projects/v3-periphery":
+"@pancakeswap/v3-periphery@*", "@pancakeswap/v3-periphery@file:/tiger/PancakeSwapV3Forking/smart-contracts/pancake-v3-contracts/projects/v3-periphery":
   version "1.0.2"
   resolved "file:projects/v3-periphery"
   dependencies:
